@@ -13,20 +13,20 @@ The MyToken contract is an ERC-20 token implemented in Solidity. It allows for t
 
 - Parameters:
 - Parameters:
-     - `_address`: The address to which the tokens will be minted.
-     - `_value`: The amount of tokens to be minted.
+     - `_address_of_eth`: The address to which the tokens will be minted.
+     - `_value_of_int`: The amount of tokens to be minted.
    - Actions:
-     - Increase the `totalSupply` by `_value`.
-     - Increase the balance of the `_address` by `_value`.
-4. burn function: This function decreases the total supply and the balance of a specified address by a given value.
+     - Increase the `totalSupply` by `_value_of_int`.
+     - Increase the balance of the `_address_of_eth` by `_value_of_int`.
+4. burn function: This function decreases the total supply and the balance of a specified address by a given value, here require statement also checks wheather Balance of that particular account is greater than or equal to No. of tokens to be burned, if it not meets the criteria then it throws an error by saying "Your Account have low Balance".
 
 Parameters:
- - `_address`: The address from which the tokens will be burned.
-- `_value`: The amount of tokens to be burned.
+ - `_address_of_eth`: The address from which the tokens will be burned.
+- `_value_of_int`: The amount of tokens to be burned.
 - Actions:
-- Checks if the balance of the _address is greater than or equal to _value.
-- If true, decreases the totalSupply by _value.
-- Decreases the balance of the _address by _value.
+- Checks if the balance of the _address_of_eth is greater than or equal to _value_of_int.
+- If true, decreases the totalSupply by _value_of_int.
+- Decreases the balance of the _address_of_eth by _value_of_int.
 
 ## Usage
 1. Deploy the MyToken contract to a supported Ethereum network.
@@ -36,12 +36,12 @@ Parameters:
 - `mint`: Creates new tokens and assigns them to a specified address.
 
 - Parameters:
- - `_address`: The address to which the tokens will be minted.
-- `_value`:  The amount of tokens to be minted.
+ - `_address_of_eth`: The address to which the tokens will be minted.
+- `_value_of_int`:  The amount of tokens to be minted.
 - `burn`: Destroys existing tokens by reducing the total supply and the balance of a specified address.
 
 - Parameters:
-- `_address`: The address from which the tokens will be burned.
-- `_value`: The amount of tokens to be burned.
+- `_address_of_eth`: The address from which the tokens will be burned.
+- `_value_of_int`: The amount of tokens to be burned.
 ## License
 This contract is licensed under the MIT License. SPDX-License-Identifier: MIT.
